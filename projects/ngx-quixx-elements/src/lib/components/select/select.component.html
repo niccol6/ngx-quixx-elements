@@ -1,0 +1,34 @@
+<label *ngIf="label" class="h4" [for]="id">{{ label }}</label>
+<div
+  #select
+  [id]="id"
+  class="quixx-select"
+  [ngClass]="{ disabled, loading, inline }"
+  (click)="$event.preventDefault(); toggle()"
+>
+  <span class="value">
+    @if (descriptionMap && !loading) {
+    {{ descriptionMap()[value] || value }}
+    }
+  </span>
+  @if (loading) {
+  <span class="quixx-loader"></span>
+  } @else {
+  <ngx-quixx-icon-chevron-down
+    [color]="'var(--color-text)'"
+    [class.rotate]="isOpen"
+  ></ngx-quixx-icon-chevron-down>
+  }
+</div>
+
+<ng-template #dropdownMenu>
+  <div
+    class="quixx-card-popover"
+    [style.maxHeight]="'200px'"
+    [style.width]="select.clientWidth + 'px'"
+  >
+    <div class="scrollable">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-template>

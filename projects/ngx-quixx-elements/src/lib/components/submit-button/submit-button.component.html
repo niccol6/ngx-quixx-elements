@@ -1,0 +1,18 @@
+<button
+  class="quixx-button d-flex justify-content-between"
+  [ngClass]="color"
+  [type]="type"
+  [disabled]="disabled"
+  (click)="click()"
+>
+  <div class="label" [ngClass]="{ 'align-left': loading || complete }">
+    <ng-content></ng-content>
+  </div>
+  <div class="picture">
+    <div *ngIf="loading" class="quixx-loader-small"></div>
+    <ngx-quixx-icon-circle-check
+      *ngIf="complete && !loading"
+      [color]="color == 'warning' ? 'var(--color-primary-100)' : '#fff'"
+    ></ngx-quixx-icon-circle-check>
+  </div>
+</button>

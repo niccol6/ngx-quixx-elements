@@ -1,0 +1,65 @@
+.quixx-select {
+  padding: var(--element-padding);
+  border-radius: var(--element-border-radius);
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+  box-shadow: var(--shadow-input);
+  height: var(--element-height);
+  display: flex;
+  align-items: center;
+
+  &.loading {
+    padding-right: 10px;
+    justify-content: flex-end;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  &.inline {
+    display: inline-flex;
+    min-width: 200px;
+    margin: 0 4px;
+  }
+}
+
+.value {
+  flex: 1;
+  padding-right: 16px;
+  min-height: 12px;
+}
+
+.quixx-select:hover {
+  cursor: pointer;
+}
+
+.quixx-select.disabled button:hover {
+  cursor: default;
+}
+
+:host.ng-invalid:not(.ng-untouched) .quixx-select:not(:focus-within) {
+  outline: 2px solid var(--color-danger-100);
+}
+
+.quixx-select.disabled {
+  background-color: var(--color-disabled);
+}
+
+.quixx-loader {
+  border: 6px solid var(--color-primary-20);
+  border-top-color: var(--color-primary-100);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  animation: spin 1s linear infinite;
+}
+
+ngx-quixx-icon-chevron-down {
+  line-height: 24px;
+  transition: all 0.5s ease;
+
+  &.rotate {
+    transform: rotate(180deg);
+  }
+}

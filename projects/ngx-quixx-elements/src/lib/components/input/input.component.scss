@@ -1,0 +1,63 @@
+@import "../../styles/overrides.css";
+
+.quixx-input {
+  padding: var(--element-padding);
+  border-radius: var(--element-border-radius);
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+  box-shadow: var(--shadow-input);
+  display: flex;
+}
+
+label {
+  margin-bottom: var(--margin-bottom-label);
+}
+
+input {
+  flex: 1;
+  height: var(--element-height);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.quixx-input.disabled button:hover {
+  cursor: default;
+}
+
+.quixx-input.search {
+  padding-right: 8px;
+
+  button {
+    height: 44px;
+    width: 44px;
+    border-radius: 8px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-input-button);
+    background-color: var(--color-primary-100);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+:host.ng-invalid:not(.ng-untouched) .quixx-input:not(:focus-within) {
+  outline: 2px solid var(--color-danger-100);
+}
+
+.quixx-input.disabled {
+  background-color: var(--color-disabled);
+
+  &.search button {
+    background-color: var(--color-disabled);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

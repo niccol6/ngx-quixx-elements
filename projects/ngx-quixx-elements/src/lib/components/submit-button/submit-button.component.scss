@@ -1,0 +1,44 @@
+.quixx-button.warning {
+  .label {
+    color: var(--color-text);
+  }
+
+  .quixx-loader-small {
+    border-color: var(--color-primary-20);
+    border-top-color: var(--color-primary-100);
+  }
+}
+
+.label {
+  padding: 2px 32px;
+  color: #fff;
+  transition: padding 0.5s ease-in;
+}
+
+.label.align-left {
+  padding: 2px 40px 2px 0;
+}
+
+.picture:empty {
+  width: 0;
+  opacity: 0;
+}
+
+.picture:not(:empty) {
+  width: 24px;
+  opacity: 1;
+}
+
+.picture {
+  transition: all 0.5s ease-in;
+  overflow: hidden;
+}
+
+.quixx-loader-small {
+  border: 4px solid #ffffff33;
+  border-top-color: #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}

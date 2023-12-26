@@ -1,0 +1,22 @@
+<label *ngIf="label" class="h4" [for]="id">{{ label }}</label>
+<div class="quixx-input" [class.disabled]="disabled" [ngClass]="type">
+  <input
+    #input
+    [id]="id"
+    [value]="value"
+    [type]="inputElementType"
+    autocomplete="off"
+    [disabled]="disabled"
+    [attr.maxlength]="maxLength"
+  />
+  <button *ngIf="type == 'search'" type="button" (click)="onSearch()">
+    <ngx-quixx-icon-search [color]="'var(--color-white)'" [size]="20"></ngx-quixx-icon-search>
+  </button>
+  <button *ngIf="type == 'password'" type="button" (click)="toggleShowPassword()">
+    <ngx-quixx-icon-eye *ngIf="!showPassword" [color]="'var(--color-text)'"></ngx-quixx-icon-eye>
+    <ngx-quixx-icon-eye-off
+      *ngIf="showPassword"
+      [color]="'var(--color-text)'"
+    ></ngx-quixx-icon-eye-off>
+  </button>
+</div>

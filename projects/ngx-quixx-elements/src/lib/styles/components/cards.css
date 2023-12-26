@@ -1,0 +1,18 @@
+.quixx-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius-large);
+  padding: var(--padding-external);
+}
+
+.quixx-card-popover {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--element-border-radius);
+  background-color: var(--color-input-bg);
+  box-shadow: var(--shadow-input);
+}
+
+.quixx-card-popover > .scrollable {
+  height: 100%;
+  overflow-y: auto;
+}

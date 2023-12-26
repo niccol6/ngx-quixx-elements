@@ -1,0 +1,16 @@
+:root {
+  --color-text: #364356;
+  --color-input-bg: #fff;
+  --element-height: 44px;
+  --element-padding: 8px 16px;
+  --element-border-radius: 8px;
+  --border-radius-small: 12px;
+  --border-radius-medium: 16px;
+  --border-radius-large: 24px;
+  --padding-button: 16px;
+  --padding-external: 20px;
+  --margin-bottom-label: 12px;
+  --shadow-input: 0px 7px 6px rgba(0, 0, 0, 0.03);
+  --shadow-input-button: 0px 4px 4px rgba(0, 0, 0, 0.13);
+  --margin-heading-2: 30px;
+}

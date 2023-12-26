@@ -1,0 +1,17 @@
+<fieldset class="h-100 overflow-y-auto" [disabled]="disabled" (blur)="touched()">
+  <div>
+    <div class="bold question-text">
+      {{ title }}
+    </div>
+    <p class="fill-out-text">
+      @for (snippet of text; track snippet; let i = $index; let l = $last) {
+      <span>{{ snippet }}</span>
+      <ngx-quixx-select *ngIf="!l" [inline]="true" [formControl]="formArray.at(i)">
+        <ngx-quixx-select-option *ngFor="let option of options[i]" [value]="option.key">
+          <span>{{ option.value }}</span>
+        </ngx-quixx-select-option>
+      </ngx-quixx-select>
+      }
+    </p>
+  </div>
+</fieldset>

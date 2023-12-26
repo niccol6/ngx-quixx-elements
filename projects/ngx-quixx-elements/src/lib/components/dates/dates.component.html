@@ -1,0 +1,18 @@
+<fieldset *ngIf="formArray" class="h-100 overflow-y-auto" [disabled]="disabled" (blur)="touched()">
+  <div>
+    <div class="bold question-text">
+      {{ title }}
+    </div>
+    @for (e of events; track e.key; let i = $index) {
+    <div class="event">
+      <label [id]="'ngx-quixx-dates-event-' + e.key">{{ e.value }}</label>
+      <ngx-quixx-input
+        type="number"
+        maxLength="4"
+        [id]="'ngx-quixx-dates-event-' + e.key"
+        [formControl]="formArray.at(i)"
+      ></ngx-quixx-input>
+    </div>
+    }
+  </div>
+</fieldset>

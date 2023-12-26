@@ -1,0 +1,9 @@
+:root {
+  --color-app-bg: var(--color-primary-10);
+  --color-toolbar-bg: var(--color-primary-100);
+  --color-paragraph: var(--color-grey-100);
+  --color-card-bg: var(--color-grey-10);
+  --color-option-bg: var(--color-grey-20);
+  --color-option-border: var(--color-grey-60);
+  --color-disabled: var(--color-grey-60);
+}

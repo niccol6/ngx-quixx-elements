@@ -1,0 +1,18 @@
+.option {
+  border: 1px solid var(--color-option-border);
+  transition: box-shadow 0.1s ease-in;
+}
+
+.option:hover {
+  cursor: pointer;
+}
+
+.option.selected {
+  border-color: var(--color-secondary-100);
+  outline: 1px solid var(--color-secondary-100);
+  box-shadow: rgba(0, 0, 0, 0.32) 0px 2px 4px;
+}
+
+.option.selected:hover {
+  cursor: default;
+}

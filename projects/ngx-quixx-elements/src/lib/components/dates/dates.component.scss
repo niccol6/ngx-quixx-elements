@@ -1,0 +1,17 @@
+:host {
+  display: table;
+}
+
+.event {
+  display: table-row;
+
+  & > * {
+    display: table-cell;
+    padding: 6px 0;
+  }
+
+  & > ngx-quixx-input {
+    padding-left: 16px;
+    min-width: 80px;
+  }
+}

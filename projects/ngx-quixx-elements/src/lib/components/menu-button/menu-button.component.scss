@@ -1,0 +1,17 @@
+.quixx-menu-button {
+  display: contents;
+
+  .quixx-card-popover {
+    max-height: 600px;
+    max-width: 200px;
+  }
+}
+
+.quixx-menu-item {
+  padding: 8px 24px;
+
+  &:not(.disabled):hover {
+    cursor: pointer;
+    background-color: var(--color-primary-10);
+  }
+}

@@ -1,0 +1,69 @@
+/** Buttons */
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border-width: 0;
+}
+
+button:not(:disabled):hover {
+  cursor: pointer;
+}
+
+/** Fieldset */
+
+:is(fieldset, legend) {
+  appearance: none;
+}
+
+fieldset {
+  border: 0;
+  padding: 2px;
+}
+
+/** Labels */
+
+label {
+  display: inline-block;
+}
+
+/** Inputs */
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  width: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/** Images */
+
+img {
+  display: block;
+}

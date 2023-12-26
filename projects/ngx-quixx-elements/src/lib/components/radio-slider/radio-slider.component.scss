@@ -1,0 +1,33 @@
+.quixx-radio-slider {
+  display: flex;
+  align-items: center;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-primary-100);
+  border-radius: 50px;
+  position: relative;
+
+  label {
+    z-index: 1;
+    padding: 16px 32px;
+    border-radius: 50px;
+    transition: color 0.3s ease;
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+
+  label.selected {
+    padding: 16px 30px;
+    color: var(--color-white);
+    font-weight: 600;
+  }
+
+  .selection {
+    position: absolute;
+    background: var(--color-primary-100);
+    border: 1px solid var(--color-primary-100);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+}

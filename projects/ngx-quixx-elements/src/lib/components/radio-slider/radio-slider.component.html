@@ -1,0 +1,16 @@
+<fieldset [disabled]="disabled" (blur)="touched()">
+  <div class="selection" [style]="getSelectionStyle()"></div>
+  @for (option of options; track option; let i = $index) {
+  <input
+    #radioElement
+    type="radio"
+    value="option"
+    [attr.name]="name"
+    [attr.id]="'option-' + i"
+    (input)="changed(option)"
+  />
+  <label [attr.for]="'option-' + i" [attr.id]="'label-' + i" [class.selected]="value == option">
+    {{ option }}
+  </label>
+  }
+</fieldset>

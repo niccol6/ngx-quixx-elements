@@ -1,0 +1,17 @@
+<button
+  #button
+  [disabled]="disabled"
+  (click)="toggle()"
+  [style.height]="size + 'px'"
+  [style.width]="size + 'px'"
+>
+  <ngx-quixx-icon-menu [color]="'var(--color-white)'" [size]="size"></ngx-quixx-icon-menu>
+</button>
+
+<ng-template #dropdownMenu>
+  <div class="quixx-card-popover">
+    <div class="scrollable">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-template>
