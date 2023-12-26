@@ -1,27 +1,6 @@
 {
   "name": "ngx-quixx-elements",
   "version": "1.0.0",
-  "description": "A set of Angular UI components for quiz applications, originally created for the game app HistoryQuiXX",
-  "author": "www.historyquixx.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/niccol6/ngx-quixx-elements.git"
-  },
-  "bugs": {
-    "url": "https://github.com/niccol6/ngx-quixx-elements/issues"
-  },
-  "homepage": "https://github.com/niccol6/ngx-quixx-elements",
-  "keywords": [
-    "angular",
-    "javascript",
-    "typescript",
-    "UI components",
-    "quiz",
-    "history",
-    "history quiz",
-    "history quixx"
-  ],
-  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -30,7 +9,7 @@
     "test": "ng test",
     "test-coverage": "ng test --code-coverage"
   },
-  "private": false,
+  "private": true,
   "dependencies": {
     "tslib": "^2.3.0"
   },

@@ -1,25 +1,39 @@
 # NgxQuixxElements
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+This project consist in a set of Angular UI components created for the quiz application HistoryQuixx (www.historyquixx.com). Feel free to copy, edit and use the code for your own purposes.
 
-## Code scaffolding
+License: MIT
 
-Run `ng generate component component-name --project ngx-quixx-elements` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-quixx-elements`.
+## Features
 
-> Note: Don't forget to add `--project ngx-quixx-elements` or else it will be added to the default project in your `angular.json` file.
+The library provides some useful Angular components for building quiz applications:
 
-## Build
+- Dates: displays a list of events, the player must fill the input with the year they took place.
 
-Run `ng build ngx-quixx-elements` to build the project. The build artifacts will be stored in the `dist/` directory.
+- FillOut: shows a text with some blank spaces, the player must select the missing word or sentences among those provided.
 
-## Publishing
+- Input: classic UI component with customized behavior for search, number, text and password types.
 
-After building your library with `ng build ngx-quixx-elements`, go to the dist folder `cd dist/ngx-quixx-elements` and run `npm publish`.
+- MenuButton: clicking the button pops a selection menu.
 
-## Running unit tests
+- MultipleChoice: a classic radio button for quizzes, with question and possible answers. Optionally displays an image.
 
-Run `ng test ngx-quixx-elements` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Progress: a pipe appearance progress bar.
 
-## Further help
+- RadioSlider: a radio button for quick choices.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Select: dropdown component with the library style.
+
+- SubmitButton: submit button with loading and completed states.
+
+Their colors are highly customizable changing the css variables.
+
+Besides, the library provides:
+
+- css classes for styling buttons and cards according to the design system.
+
+- utility classes and functions, like a SubBulk for managing subscriptions and an RxJS custom pipe to extend distinctUntilChanged to arrays.
+
+## Installation
+
+- `npm install ngx-quixx-elements`
