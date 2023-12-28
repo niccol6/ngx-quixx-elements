@@ -12,7 +12,8 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "ngx-quixx-elements": [
-        "./dist/ngx-quixx-elements"
+        //"./dist/ngx-quixx-elements"
+        "./projects/ngx-quixx-elements/src/public-api.ts"
       ]
     },
     "declaration": false,

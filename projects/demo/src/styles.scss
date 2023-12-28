@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../../../dist/ngx-quixx-elements/styles/index.css";
+@import "@angular/cdk/overlay-prebuilt.css";
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.code-container {
+  background-color: var(--color-grey-20);
+}
+
+.quixx-card.primary {
+  background-color: var(--color-primary-20);
+}
