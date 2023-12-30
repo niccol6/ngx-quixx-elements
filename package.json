@@ -1,10 +1,11 @@
 {
   "name": "ngx-quixx-elements",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve demo",
     "build": "ng build demo",
+    "build-docs": "ng build demo --output-path docs --base-href /demo/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-coverage": "ng test --code-coverage",
