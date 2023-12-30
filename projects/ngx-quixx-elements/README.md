@@ -36,4 +36,72 @@ Besides, the library provides:
 
 ## Installation
 
+Requires Angular 17 and Angular CDK 17.
+
+Install through npm:
 - `npm install ngx-quixx-elements`
+
+## Import css
+
+Most of the components need to import css to work properly.
+
+Import the cdk/overlay and the library styles in your main style file (by default is style.css):
+
+```
+@import "@angular/cdk/overlay-prebuilt.css";
+@import "node_modules/ngx-quixx-elements/styles/index.css";
+```
+
+The library styles can otherwise be imported globally in your `angular.json`:
+
+```
+{
+  ...
+  "projects": {
+    "project_name": {
+      ...
+      "architect": {
+        ...
+        "build": {
+          ...
+          "options": {
+            ...
+            "styles": [
+              ...
+              "node_modules/ngx-quixx-elements/styles/index.css"
+            ],
+          }
+        }
+      }
+    }
+  }
+}
+```
+## Use components
+
+Import in module or in standalone component:
+
+```
+@NgModule({
+...
+imports: [
+    ...
+    NgxQuixxInputComponent,
+],
+...
+})
+```
+
+Use in the template:
+```
+<ngx-quixx-input
+    type="search"
+    label="Filter"
+    (search)="onSearch($event)"
+></ngx-quixx-input>
+```
+
+## Demo
+
+Visit the demo page for the instruction for using the components.
+

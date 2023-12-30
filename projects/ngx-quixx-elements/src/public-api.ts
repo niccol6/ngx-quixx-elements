@@ -13,4 +13,5 @@ export * from './lib/components/select/select.module';
 export * from './lib/components/radio-slider/radio-slider.component';
 export * from './lib/components/submit-button/submit-button.component';
 export * from './lib/models/question.model';
+export * from './lib/utils/functions';
 export * from './lib/utils/sub-bulk';
