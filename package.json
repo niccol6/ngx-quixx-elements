@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve demo",
     "build": "ng build demo",
-    "build-docs": "ng build demo --output-path docs --base-href /demo/",
+    "build-docs": "ng build demo --output-path docs --base-href /demo/ && cd ./docs && mv browser/* . && rmdir browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-coverage": "ng test --code-coverage",
