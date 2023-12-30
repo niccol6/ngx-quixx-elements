@@ -15,6 +15,11 @@ import {
 
 export const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'dates',
+  },
+  {
     component: CustomPipesComponent,
     path: 'custom-pipes',
   },
@@ -58,4 +63,8 @@ export const routes: Routes = [
     component: SubmitButtonComponent,
     path: 'submit-button',
   },
+  {
+    path: '*',
+    redirectTo: 'dates',
+  }
 ];
