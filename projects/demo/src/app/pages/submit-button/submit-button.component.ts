@@ -1,10 +1,12 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { NgxQuixxSubmitButtonComponent } from 'ngx-quixx-elements';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-submit-button',
   standalone: true,
-  imports: [NgxQuixxSubmitButtonComponent],
+  imports: [NgxQuixxSubmitButtonComponent, CommonModule],
   templateUrl: './submit-button.component.html',
 })
 export class SubmitButtonComponent {
@@ -16,10 +18,10 @@ export class SubmitButtonComponent {
       (onClick)="submitClick()"
   >Send</ngx-quixx-submit-button>
 `;
-  submitCompleted = false;
-  submitReset = false;
+  submitCompleted$ = new BehaviorSubject<boolean>(false);
+  submitReset$ = new BehaviorSubject<boolean>(false);
   submitClick() {
-    setTimeout(() => (this.submitCompleted = true), 15000);
-    setTimeout(() => (this.submitReset = true), 30000);
+    setTimeout(() => (this.submitCompleted$.next(true)), 5000);
+    setTimeout(() => (this.submitReset$.next(true)), 10000);
   }
 }

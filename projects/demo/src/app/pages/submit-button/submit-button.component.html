@@ -5,8 +5,8 @@
 <h2>Example:</h2>
 <div class="mb-20px">
   <ngx-quixx-submit-button
-    [complete]="submitCompleted"
-    [reset]="submitReset"
+    [complete]="submitCompleted$ | async"
+    [reset]="submitReset$ | async"
     (onClick)="submitClick()"
     >Send</ngx-quixx-submit-button>
 </div>
