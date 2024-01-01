@@ -1,17 +1,9 @@
-<h2>API</h2>
-<div class="code-container">
-  <code>{{ api }}</code>
-</div>
-<h2>Example:</h2>
-<div class="quixx-card primary mb-20px">
-  <ngx-quixx-progress
-    [value]="3"
-    [scale]="5"
-  ></ngx-quixx-progress>
-</div>
-<h2>Snippet</h2>
-<div class="code-container">
-  <code>
-    <pre>{{ snippet }}</pre>
-  </code>
-</div>
+<app-page-template [api]="api" [snippet]="snippet">
+  <ngx-quixx-progress component [value]="3" [scale]="5"></ngx-quixx-progress>
+  <div classInfo>
+    <h3>Input</h3>
+    <p><code>value: number</code></p>
+    <p><code>scale: number</code></p>
+    <p><code>color: string</code></p>
+  </div>
+</app-page-template>

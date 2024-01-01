@@ -1,18 +1,15 @@
-<h2>API</h2>
-<div class="code-container">
-  <code>{{ api }}</code>
-</div>
-<h2>Example:</h2>
-<div class="quixx-card primary mb-20px">
+<app-page-template [api]="api" [snippet]="snippet">
   <ngx-quixx-dates
+    component
     title="Insert the dates"
     [dateRange]="[1000, 1500]"
     [events]="events"
   ></ngx-quixx-dates>
-</div>
-<h2>Snippet</h2>
-<div class="code-container">
-  <code>
-    <pre>{{ snippet }}</pre>
-  </code>
-</div>
+  <div classInfo>
+    <p><code>implements ControlValueAccessor</code></p>
+    <h3>Input</h3>
+    <p><code>title: string</code></p>
+    <p><code>dateRange: [number, number]</code></p>
+    <p><code>events: NgxQuixxQuestionOption[]</code></p>
+  </div>
+</app-page-template>

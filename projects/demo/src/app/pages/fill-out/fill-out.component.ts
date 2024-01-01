@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { NgxQuixxFillOutComponent, NgxQuixxQuestionOption } from 'ngx-quixx-elements';
+import { PageTemplateComponent } from '../page-template.component';
 
 @Component({
   selector: 'app-fill-out',
   standalone: true,
-  imports: [NgxQuixxFillOutComponent],
+  imports: [PageTemplateComponent, NgxQuixxFillOutComponent],
   templateUrl: './fill-out.component.html',
 })
 export class FillOutComponent {
   text = [
     'From the day we arrive on the planet',
-    'There\'s more to see than can ever be seen',
+    "There's more to see than can ever be seen",
     'than can ever be done',
   ];
   options: NgxQuixxQuestionOption[][] = [

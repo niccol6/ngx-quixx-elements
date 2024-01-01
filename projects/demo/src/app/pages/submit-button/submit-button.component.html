@@ -1,18 +1,19 @@
-<h2>API</h2>
-<div class="code-container">
-  <code>{{ api }}</code>
-</div>
-<h2>Example:</h2>
-<div class="mb-20px">
+<app-page-template [api]="api" [snippet]="snippet">
   <ngx-quixx-submit-button
+    component
     [complete]="submitCompleted$ | async"
     [reset]="submitReset$ | async"
     (onClick)="submitClick()"
-    >Send</ngx-quixx-submit-button>
-</div>
-<h2>Snippet</h2>
-<div class="code-container">
-  <code>
-    <pre>{{ snippet }}</pre>
-  </code>
-</div>
+    >Send</ngx-quixx-submit-button
+  >
+  <div classInfo>
+    <h3>Input</h3>
+    <p><code>color: string</code></p>
+    <p><code>type: 'button' | 'submit' | 'reset'</code></p>
+    <p><code>disabled: boolean</code></p>
+    <p><code>complete: boolean</code></p>
+    <p><code>reset: boolean</code></p>
+    <h3>Output</h3>
+    <p><code>onClick: void</code></p>
+  </div>
+</app-page-template>

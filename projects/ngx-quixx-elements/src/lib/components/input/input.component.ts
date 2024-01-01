@@ -56,7 +56,7 @@ export class NgxQuixxInputComponent
   @Input() public maxLength: string = '100';
 
   /** Event fired on input type search when enter key is pressed or the search button is clicked */
-  @Output() private search = new EventEmitter();
+  @Output() private search = new EventEmitter<string>();
 
   @ViewChild('input') private input: ElementRef<HTMLInputElement>;
 
@@ -108,8 +108,8 @@ export class NgxQuixxInputComponent
         .pipe(
           filter(
             (e: KeyboardEvent) =>
-              !e.code.startsWith('Digit') || (!inputElement.value && e.code == 'Digit0')
-          )
+              !e.code.startsWith('Digit') || (!inputElement.value && e.code == 'Digit0'),
+          ),
         )
         .subscribe((e) => e.preventDefault());
     }
