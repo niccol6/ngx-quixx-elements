@@ -1,14 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-critters-container>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Demo</title>
-    <base href="/ngx-quixx-elements/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>:root{--color-primary-100: #1a8fe3;--color-primary-80: #1a8fe3cc;--color-primary-60: #1a8fe399;--color-primary-40: #1a8fe366;--color-primary-20: #1a8fe333;--color-primary-10: #1a8fe31a;--color-secondary-100: #6610f2;--color-secondary-80: #6610f2cc;--color-secondary-60: #6610f299;--color-secondary-40: #6610f266;--color-secondary-20: #6610f233;--color-secondary-10: #6610f21a;--color-success-100: #34c191;--color-success-80: #34c191cc;--color-success-60: #34c19199;--color-success-40: #34c19166;--color-success-20: #34c19133;--color-success-10: #34c1911a;--color-warning-100: #e6c229;--color-warning-80: #e6c229cc;--color-warning-60: #e6c22999;--color-warning-40: #e6c22966;--color-warning-20: #e6c22933;--color-warning-10: #e6c2291a;--color-danger-100: #d11149;--color-danger-80: #d11149cc;--color-danger-60: #d1114999;--color-danger-40: #d1114966;--color-danger-20: #d1114933;--color-danger-10: #d111491a;--color-grey-100: #323031;--color-grey-80: #696769;--color-grey-60: #b4b4b4;--color-grey-40: #d6d6d6;--color-grey-20: #f2f2f2;--color-grey-10: #f7f7f7;--color-white: #fff;--color-black: #000}:root{--color-app-bg: var(--color-primary-10);--color-toolbar-bg: var(--color-primary-100);--color-paragraph: var(--color-grey-100);--color-card-bg: var(--color-grey-10);--color-option-bg: var(--color-grey-20);--color-option-border: var(--color-grey-60);--color-disabled: var(--color-grey-60)}:root{--color-text: #364356;--color-input-bg: #fff;--element-height: 44px;--element-padding: 8px 16px;--element-border-radius: 8px;--border-radius-small: 12px;--border-radius-medium: 16px;--border-radius-large: 24px;--padding-button: 16px;--padding-external: 20px;--margin-bottom-label: 12px;--shadow-input: 0px 7px 6px rgba(0, 0, 0, .03);--shadow-input-button: 0px 4px 4px rgba(0, 0, 0, .13);--margin-heading-2: 30px}body{height:100vh;width:100vw;margin:0;font-family:Arial,Helvetica,sans-serif;overflow:hidden}
-</style><link rel="stylesheet" href="styles-AXRJKPTM.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-AXRJKPTM.css"></noscript></head>
+    <base href="/ngx-quixx-elements/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      :root {
+        --color-primary-100: #1a8fe3;
+        --color-primary-80: #1a8fe3cc;
+        --color-primary-60: #1a8fe399;
+        --color-primary-40: #1a8fe366;
+        --color-primary-20: #1a8fe333;
+        --color-primary-10: #1a8fe31a;
+        --color-secondary-100: #6610f2;
+        --color-secondary-80: #6610f2cc;
+        --color-secondary-60: #6610f299;
+        --color-secondary-40: #6610f266;
+        --color-secondary-20: #6610f233;
+        --color-secondary-10: #6610f21a;
+        --color-success-100: #34c191;
+        --color-success-80: #34c191cc;
+        --color-success-60: #34c19199;
+        --color-success-40: #34c19166;
+        --color-success-20: #34c19133;
+        --color-success-10: #34c1911a;
+        --color-warning-100: #e6c229;
+        --color-warning-80: #e6c229cc;
+        --color-warning-60: #e6c22999;
+        --color-warning-40: #e6c22966;
+        --color-warning-20: #e6c22933;
+        --color-warning-10: #e6c2291a;
+        --color-danger-100: #d11149;
+        --color-danger-80: #d11149cc;
+        --color-danger-60: #d1114999;
+        --color-danger-40: #d1114966;
+        --color-danger-20: #d1114933;
+        --color-danger-10: #d111491a;
+        --color-grey-100: #323031;
+        --color-grey-80: #696769;
+        --color-grey-60: #b4b4b4;
+        --color-grey-40: #d6d6d6;
+        --color-grey-20: #f2f2f2;
+        --color-grey-10: #f7f7f7;
+        --color-white: #fff;
+        --color-black: #000;
+      }
+      :root {
+        --color-app-bg: var(--color-primary-10);
+        --color-toolbar-bg: var(--color-primary-100);
+        --color-paragraph: var(--color-grey-100);
+        --color-card-bg: var(--color-grey-10);
+        --color-option-bg: var(--color-grey-20);
+        --color-option-border: var(--color-grey-60);
+        --color-disabled: var(--color-grey-60);
+      }
+      :root {
+        --color-text: #364356;
+        --color-input-bg: #fff;
+        --element-height: 44px;
+        --element-padding: 8px 16px;
+        --element-border-radius: 8px;
+        --border-radius-small: 12px;
+        --border-radius-medium: 16px;
+        --border-radius-large: 24px;
+        --padding-button: 16px;
+        --padding-external: 20px;
+        --margin-bottom-label: 12px;
+        --shadow-input: 0px 7px 6px rgba(0, 0, 0, 0.03);
+        --shadow-input-button: 0px 4px 4px rgba(0, 0, 0, 0.13);
+        --margin-heading-2: 30px;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow: hidden;
+      }
+    </style>
+    <link rel="stylesheet" href="styles-VZ5ZBJWF.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="styles-VZ5ZBJWF.css" /></noscript>
+  </head>
   <body>
     <app-root></app-root>
-  <script src="polyfills-LZBJRJJE.js" type="module"></script><script src="main-G2TLDFNO.js" type="module"></script></body>
+    <script src="polyfills-LZBJRJJE.js" type="module"></script>
+    <script src="main-YQZGEXW2.js" type="module"></script>
+  </body>
 </html>
