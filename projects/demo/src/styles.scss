@@ -10,7 +10,8 @@ body {
   overflow: hidden;
 }
 
-.code-container {
+.code-container,
+code {
   background-color: var(--color-grey-20);
 }
 

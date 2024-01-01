@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgxQuixxSubmitButtonComponent } from 'ngx-quixx-elements';
 import { BehaviorSubject } from 'rxjs';
+import { PageTemplateComponent } from '../page-template.component';
 
 @Component({
   selector: 'app-submit-button',
   standalone: true,
-  imports: [NgxQuixxSubmitButtonComponent, CommonModule],
+  imports: [PageTemplateComponent, NgxQuixxSubmitButtonComponent, CommonModule],
   templateUrl: './submit-button.component.html',
 })
 export class SubmitButtonComponent {
@@ -21,7 +22,7 @@ export class SubmitButtonComponent {
   submitCompleted$ = new BehaviorSubject<boolean>(false);
   submitReset$ = new BehaviorSubject<boolean>(false);
   submitClick() {
-    setTimeout(() => (this.submitCompleted$.next(true)), 5000);
-    setTimeout(() => (this.submitReset$.next(true)), 10000);
+    setTimeout(() => this.submitCompleted$.next(true), 5000);
+    setTimeout(() => this.submitReset$.next(true), 10000);
   }
 }

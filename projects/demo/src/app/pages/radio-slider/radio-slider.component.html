@@ -1,14 +1,13 @@
-<h2>API</h2>
-<div class="code-container">
-  <code>{{ api }}</code>
-</div>
-<h2>Example:</h2>
-<div class="mb-20px">
-  <ngx-quixx-radio-slider [options]="['Red', 'Green', 'Blue']"></ngx-quixx-radio-slider>
-</div>
-<h2>Snippet</h2>
-<div class="code-container">
-  <code>
-    <pre>{{ snippet }}</pre>
-  </code>
-</div>
+<app-page-template [api]="api" [snippet]="snippet">
+  <div component style="display: flex">
+    <ngx-quixx-radio-slider
+      [options]="['Redsdfsad', 'Greenasd', 'Blueasdas']"
+    ></ngx-quixx-radio-slider>
+  </div>
+
+  <div classInfo>
+    <p><code>implements ControlValueAccessor</code></p>
+    <h3>Input</h3>
+    <p><code>options: string[]</code></p>
+  </div>
+</app-page-template>

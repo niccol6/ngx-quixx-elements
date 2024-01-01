@@ -44,7 +44,7 @@ export class NgxQuixxSubmitButtonComponent {
   }
 
   /** Event fired on button click */
-  @Output() private onClick = new EventEmitter();
+  @Output() private onClick = new EventEmitter<void>();
 
   public get loading() {
     return this._loading;

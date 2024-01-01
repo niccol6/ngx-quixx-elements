@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NgxQuixxDatesComponent, NgxQuixxQuestionOption } from 'ngx-quixx-elements';
+import { PageTemplateComponent } from '../page-template.component';
 
 @Component({
   selector: 'app-dates',
   standalone: true,
-  imports: [NgxQuixxDatesComponent],
+  imports: [PageTemplateComponent, NgxQuixxDatesComponent],
   templateUrl: './dates.component.html',
 })
 export class DatesComponent {

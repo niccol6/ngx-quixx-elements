@@ -1,6 +1,6 @@
 # NgxQuixxElements
 
-This project consist in a set of Angular UI components created for the quiz application HistoryQuixx (www.historyquixx.com). Feel free to copy, edit and use the code for your own purposes.
+This project consist in a set of Angular UI components created for the quiz application [HistoryQuixx](www.historyquixx.com). Feel free to copy, edit and use the code for your own purposes.
 
 License: MIT
 
@@ -103,5 +103,5 @@ Use in the template:
 
 ## Demo
 
-Visit the demo page for the instruction for using the components.
+Visit the [demo page](https://niccol6.github.io/ngx-quixx-elements/) for the instruction for using the components.
 

@@ -41,4 +41,17 @@ describe('NgxQuixxMenuButtonComponent', () => {
     buttonElement.click();
     expect(spyHide).toHaveBeenCalled();
   });
+
+  it('click on element should call onClick emitter', () => {
+    const fakeOption = 'option1';
+    const spy = spyOn(component.onClick, 'emit');
+    component['toggle']();
+    const element = document.createElement('div');
+    element.className = 'quixx-menu-item';
+    element.innerText = fakeOption;
+    document.body.appendChild(element);
+    element.click();
+    element.remove();
+    expect(spy).toHaveBeenCalledWith(fakeOption);
+  });
 });

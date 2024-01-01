@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
-import { NgxQuixxMultipleChoiceComponent, NgxQuixxQuestion, NgxQuixxQuestionOption } from 'ngx-quixx-elements';
+import {
+  NgxQuixxMultipleChoiceComponent,
+  NgxQuixxQuestion,
+  NgxQuixxQuestionOption,
+} from 'ngx-quixx-elements';
+import { PageTemplateComponent } from '../page-template.component';
 
 @Component({
   selector: 'app-multiple-choice',
   standalone: true,
-  imports: [NgxQuixxMultipleChoiceComponent],
+  imports: [PageTemplateComponent, NgxQuixxMultipleChoiceComponent],
   templateUrl: './multiple-choice.component.html',
 })
 export class MultipleChoiceComponent {
@@ -28,7 +33,7 @@ export class MultipleChoiceComponent {
         key: 4,
         value: 'Chocolate',
       },
-    ]
+    ],
   };
   api = `import { NgxQuixxMultipleChoiceComponent } from 'ngx-quixx-elements';`;
   snippet = `
