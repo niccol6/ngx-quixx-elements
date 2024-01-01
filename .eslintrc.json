@@ -29,7 +29,7 @@
             "style": "kebab-case"
           }
         ],
-        "@typescript-eslint/no-non-null-assertion": "no-error"
+        "@typescript-eslint/no-non-null-assertion": 0
       }
     },
     {
