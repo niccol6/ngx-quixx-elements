@@ -1,14 +1,12 @@
-<h2>API</h2>
-<div class="code-container">
-  <code>{{ api }}</code>
-</div>
-<h2>Example:</h2>
-<div class="quixx-card primary mb-20px">
-  <ngx-quixx-input type="search" (search)="onSearch($event)"></ngx-quixx-input>
-</div>
-<h2>Snippet</h2>
-<div class="code-container">
-  <code>
-    <pre>{{ snippet }}</pre>
-  </code>
-</div>
+<app-page-template [api]="api" [snippet]="snippet">
+  <ngx-quixx-input component type="search" (search)="onSearch($event)"></ngx-quixx-input>
+  <div classInfo>
+    <p><code>implements ControlValueAccessor</code></p>
+    <h3>Input</h3>
+    <p><code>type: 'number' | 'password' | 'search' | 'text'</code></p>
+    <p><code>label: string</code></p>
+    <p><code>maxLength: string</code></p>
+    <h3>Output</h3>
+    <p><code>search: string</code></p>
+  </div>
+</app-page-template>

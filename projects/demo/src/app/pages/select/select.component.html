@@ -1,16 +1,14 @@
-<h2>API</h2>
-<div class="code-container">
-  <code>{{ api }}</code>
-</div>
-<h2>Example:</h2>
-<div class="quixx-card primary mb-20px">
-  <ngx-quixx-select label="Select your continent">
+<app-page-template [api]="api" [snippet]="snippet">
+  <ngx-quixx-select label="Select your continent" component>
     <ngx-quixx-select-option *ngFor="let option of options">{{ option }}</ngx-quixx-select-option>
   </ngx-quixx-select>
-</div>
-<h2>Snippet</h2>
-<div class="code-container">
-  <code>
-    <pre>{{ snippet }}</pre>
-  </code>
-</div>
+  <div classInfo>
+    <p><code>implements ControlValueAccessor</code></p>
+    <h3>Input</h3>
+    <p><code>label: string</code></p>
+    <p><code>inline: boolean</code></p>
+    <p><code>disabled: boolean</code></p>
+    <h3>Output</h3>
+    <p><code>search: string</code></p>
+  </div>
+</app-page-template>

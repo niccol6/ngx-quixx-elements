@@ -1,6 +1,6 @@
 {
   "name": "ngx-quixx-elements",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve demo",
@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-coverage": "ng test --code-coverage",
-    "lib-publish": "ng build ngx-quixx-elements && cd ./dist/ngx-quixx-elements/ && npm publish"
+    "lib-publish": "ng build ngx-quixx-elements && cd ./dist/ngx-quixx-elements/ && npm publish",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -27,17 +28,24 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.8",
+    "@angular-eslint/eslint-plugin": "^17.1.1",
+    "@angular-eslint/eslint-plugin-template": "^17.1.1",
     "@angular/cli": "^17.0.8",
     "@angular/compiler-cli": "^17.0.8",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@angular-eslint/template-parser": "^17.1.1",
+    "husky": "^8.0.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^15.2.0",
     "ng-packagr": "^17.0.0",
+    "prettier": "^3.1.1",
     "typescript": "~5.2.2"
   }
 }
